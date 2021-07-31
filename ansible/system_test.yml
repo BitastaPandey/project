@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+  tasks:
+
+    - name: Ping Command 
+      action: ping 
+
+    - name: Sudo Command 
+      shell:
+        cmd: sudo whoami

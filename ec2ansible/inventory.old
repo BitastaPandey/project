@@ -1,0 +1,63 @@
+<<<<<<< HEAD
+[all:vars]
+    # domain: web01
+    # ansible_user: ubuntu
+    # ansible_ssh_private_key_file: ~/.ssh/id_rsa
+    # ansible_sudo_pass: qwerty
+
+[web]
+    ec2web01
+
+[api]
+    ec2api01
+
+[nodes]
+    ec2web01
+    ec2api01
+
+[localhost]
+    ec2controller
+    
+=======
+<<<<<<< HEAD
+[all:vars]
+    # domain: web01
+    # ansible_user: ubuntu
+    # ansible_ssh_private_key_file: ~/.ssh/id_rsa
+    # ansible_sudo_pass: qwerty
+
+[web]
+    ec2web01
+
+[api]
+    ec2api01
+
+[nodes]
+    ec2web01
+    ec2api01
+
+[localhost]
+    ec2controller01
+    
+=======
+[all:vars]
+    # domain: web01
+    # ansible_user: ubuntu
+    # ansible_ssh_private_key_file: ~/.ssh/id_rsa
+    # ansible_sudo_pass: qwerty
+
+[web]
+    ec2web01
+
+[api]
+    ec2api01
+
+[nodes]
+    ec2web01
+    ec2api01
+
+[localhost]
+    ec2controller01
+    
+>>>>>>> 3bc210537cab7cc05cef2631c6c4120acab968ad
+>>>>>>> 0c09a2806dd544d8bfd5ef87fdf57a1b44587094

@@ -1,0 +1,41 @@
+---
+- name: Super simple playbook for testing
+- hosts: virtualbox
+
+  tasks:
+    - name: Ping  
+      ping:
+    
+    - name: Install Python 
+      apt:
+        name: python3
+        state: present
+
+    - name: Install Nginx 
+      apt:
+        name: nginx
+        state: present
+
+    - name: Add the ansible user 
+      user:
+        name: ansible 
+        # password: Ansible01!
+        password: $6$oSSN05qDuS$RYlvyV6I.wJrbAyhZUepgjNRo453tXQ90UWf7re6b.i68xQvR7m2XkKINFk/jH37qYoD3LLitCJtT2/iOJC3a1
+        groups: 
+          - adm
+          - sudo
+          - dip
+          - plugdev
+          - lxd
+        state: present
+
+    - name: Make ansible part of sudoers.d
+      copy:
+        dest: "/etc/sudoers.d/ansible"
+        content: "ansible ALL=(ALL) NOPASSWD:ALL"
+    
+#    - name: Copy ansible SSH key to all servers 
+#      authorized_key: 
+#        user: ansible
+#        state: present
+#        key: "{{ lookup('file', 'ansible_rsa.pub') }}"
