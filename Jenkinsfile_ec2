@@ -1,5 +1,12 @@
 pipeline {
   agent any
+  environment {
+    COURSE = 'Calgary DevOps'
+    BRANCH = 'main'
+    WWWROOT = '/var/www'
+    SSHUSER = 'jenkins'
+    SSHKEY = '/var/lib/jenkins/.ssh/ec2-key-pair.pem'
+  }
   stages {
     stage('Audit Tools') {
       steps {
@@ -57,11 +64,5 @@ pipeline {
     }
 
   }
-  environment {
-    COURSE = 'Calgary DevOps'
-    BRANCH = 'main'
-    WWWROOT = '/var/www'
-    SSHUSER = 'jenkins'
-    SSHKEY = '/var/lib/jenkins/.ssh/ec2-key-pair.pem'
-  }
+  
 }
