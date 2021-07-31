@@ -15,5 +15,5 @@
     ec2api01
 
 [localhost]
-    ec2controller01
+    ec2controller
     

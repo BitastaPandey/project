@@ -29,4 +29,4 @@
     #   authorized_key:
     #     user: ansible
     #     state: present
-    #     key: "{{ lookup('file', '/home/cosoria/ansible/ansible_key.pub') }}"
+    #     key: "{{ lookup('file', '/home/ubuntu/.ssh/ec2-key-pair.pem') }}"
