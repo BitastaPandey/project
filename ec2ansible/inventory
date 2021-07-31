@@ -1,0 +1,19 @@
+[all:vars]
+    # domain: web01
+    # ansible_user: ubuntu
+    # ansible_ssh_private_key_file: ~/.ssh/id_rsa
+    # ansible_sudo_pass: qwerty
+
+[web]
+    ec2web01
+
+[api]
+    ec2api01
+
+[nodes]
+    ec2web01
+    ec2api01
+
+[localhost]
+    ec2controller01
+    
